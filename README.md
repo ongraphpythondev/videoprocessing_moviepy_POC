@@ -1,6 +1,6 @@
 # videoprocessing_moviepy_POC
 
-<br><h1>Prerequisites:</h1><br><br>
+<h1>Prerequisites:</h1><br>
 You will need the following programmes properly installed on your computer.<br>
 Python 3.7+ <br>
 django 2.2+ <br>
@@ -16,12 +16,11 @@ for linux(for python 3 and above)
 pip3 install virtualenv
 ```
 
-<br><h1>Installation and Running :</h1><br><br>
+<h1>Installation and Running :</h1><br>
 ```shell
 git clone https://github.com/ongraphpythondev/LoggingPOC.git 
 cd LoggingPOC
 ```
-
 for windows:
 ```shell
 virtualenv venv
@@ -32,18 +31,15 @@ for linux(for python 3 and above):
 virtualenv venv -p python3
 source venv/bin/activate
 ```
-
-<br><h1>Install required packages for the project to run</h1>
-
+<br>
+<h1>Install required packages for the project to run</h1>
 ```shell
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
-
-<h1>Test Url at local system</h1>
-http://127.0.0.1:8000/vdo/
-<h1>Testing apis :</h1>
+<br>
+<h2>Testing apis :</h2>
 
 1) replaceing audio of a video file:
     
