@@ -19,7 +19,7 @@ pip3 install virtualenv
 <h1>Installation and Running :</h1><br>
 
 ```shell
-git clone https://github.com/ongraphpythondev/LoggingPOC.git 
+git clone https://github.com/ongraphpythondev/videoprocessing_moviepy_POC/
 cd videoprocessing_moviepy_POC
 ```
 
