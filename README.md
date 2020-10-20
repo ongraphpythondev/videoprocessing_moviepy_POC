@@ -42,67 +42,6 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-<br>
-<h2>Testing apis :</h2>
-
-1) replaceing audio of a video file:
-    
-    ```curl
-    curl --location --request POST 'http://127.0.0.1:8000/vdo/replace_audio/' \
-    --form 'video=@/path/to/file' \
-    --form 'audio=@/path/to/file'
-    ```
-
-2) join 2 videos:
-
-    ```curl
-    curl --location --request POST 'http://127.0.0.1:8000/vdo/join_videos/' \
-    --form 'video=@/path/to/file' \
-    --form 'video=@/path/to/file'
-    ```
-
-
-3) flip video on x axis:
-
-    ```curl
-    curl --location --request POST 'http://127.0.0.1:8000/vdo/flipx_video/' \
-    --form 'video=@/path/to/file'
-    ```
-
-4) flip video on y axis:
-
-    ```curl
-    curl --location --request POST 'http://127.0.0.1:8000/vdo/flipy_video/' \
-    --form 'video=@/path/to/file'
-    ```
-
-
-5) reduce video quality:
-    
-    ```curl
-    curl --location --request POST 'http://127.0.0.1:8000/vdo/lower_quality/' \
-    --form 'video=@/path/to/file'
-    ```
-
-6) extract audio from video :
-
-    ```curl
-    curl --location --request POST 'http://127.0.0.1:8000/vdo/extract_audio/' \
-    --form 'video=@/path/to/file'
-    ```
-
-6) join upto 4 videos so that the play in parallel :
-
-    ```curl
-    curl --location --request POST 'http://127.0.0.1:8000/vdo/clips_array/' \
-    --form 'top_right=@/path/to/file' \
-    --form 'top_left=@/path/to/file' \
-    --form 'bottom_right=@/path/to/file' \
-    --form 'bottom_left=@/path/to/file'
-    ```
-    
-7) add a watermark to a video :
-
 <h1>Test Url at local system</h1>
 http://127.0.0.1:8000/vdo/
 
