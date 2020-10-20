@@ -20,7 +20,7 @@ pip3 install virtualenv
 
 ```shell
 git clone https://github.com/ongraphpythondev/LoggingPOC.git 
-cd LoggingPOC
+cd videoprocessing_moviepy_POC
 ```
 
 for windows:
