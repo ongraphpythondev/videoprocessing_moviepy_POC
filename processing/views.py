@@ -34,7 +34,8 @@ def join_videos(request):
     video = files.getlist('video')
     v1 = video[0]
     v2 = video[1]
-    with VideoFileClip(v1.temporary_file_path()) as vdo1, VideoFileClip(v1.temporary_file_path()) as vdo2:
+    print(v1._get_name(),v2._get_name())
+    with VideoFileClip(v1.temporary_file_path()) as vdo1, VideoFileClip(v2.temporary_file_path()) as vdo2:
         concatenate_videoclips([vdo1,vdo2]).write_videofile('media/res.mp4') # join 2 video
     return JsonResponse({'video':f'http://127.0.0.1:8000/media/res.mp4'})
 
@@ -82,8 +83,7 @@ def _clips_array(request):
     br = files.get('bottom_right')
     bl = files.get('bottom_left')
 
-    with (VideoFileClip(tr.temporary_file_path() if tr else DEFAULT_MEDIA_ROOT+'/color.mp4') as tr, VideoFileClip(tl.temporary_file_path() if tl else DEFAULT_MEDIA_ROOT+'/color.mp4') as tl,  
-          VideoFileClip(br.temporary_file_path() if br else DEFAULT_MEDIA_ROOT+'/color.mp4') as br, VideoFileClip(bl.temporary_file_path() if bl else DEFAULT_MEDIA_ROOT+'/color.mp4') as bl ): 
+    with VideoFileClip(tr.temporary_file_path() if tr else DEFAULT_MEDIA_ROOT+'/color.mp4') as tr, VideoFileClip(tl.temporary_file_path() if tl else DEFAULT_MEDIA_ROOT+'/color.mp4') as tl, VideoFileClip(br.temporary_file_path() if br else DEFAULT_MEDIA_ROOT+'/color.mp4') as br, VideoFileClip(bl.temporary_file_path() if bl else DEFAULT_MEDIA_ROOT+'/color.mp4') as bl: 
         vd = clips_array([[tr,tl],[br,bl]]) # play 4 video parallel in a grid
         vd.write_videofile('media/res.mp4')
 
