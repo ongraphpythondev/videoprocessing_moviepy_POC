@@ -17,6 +17,8 @@ from moviepy.editor import (
                 vfx, clips_array, ImageClip
                 )
 
+DEFAULT_MEDIA_ROOT= os.path.join(BASE_DIR, 'default/')
+
 @csrf_exempt
 def add_replace_audio(request):
     files = request.FILES
