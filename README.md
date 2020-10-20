@@ -35,11 +35,13 @@ source venv/bin/activate
 ```
 <br>
 <h1>Install required packages for the project to run</h1>
+
 ```shell
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
+
 <br>
 <h2>Testing apis :</h2>
 
