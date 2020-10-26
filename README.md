@@ -1,5 +1,10 @@
 # videoprocessing_moviepy_POC
 
+# Moviepy
+
+MoviePy (full documentation) is a Python library for video editing: cutting, concatenations, title insertions, video compositing (a.k.a. non-linear editing), video processing, and creation of custom effects.MoviePy can read and write all the most common audio and video formats, including GIF, and runs on Windows/Mac/Linux, with Python 2.7+ and 3 .
+
+
 <h1>Prerequisites:</h1><br>
 You will need the following programmes properly installed on your computer.<br>
 Python 3.7+ <br>
